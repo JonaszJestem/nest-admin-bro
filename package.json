@@ -2,15 +2,20 @@
   "name": "nest-admin-bro",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Jonasz Wiącek <jonaszwiacek@gmail.com>",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
     "/dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JonaszJestem/nest-admin-bro.git"
+  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "prepare": "yarn build",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
     "start:dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
     "start:debug": "tsc-watch -p tsconfig.build.json --onSuccess \"node --inspect-brk dist/main.js\"",
